@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {View, Text, Button } from "react-native";
+import {View, Text, Button, StyleSheet } from "react-native";
 import { Icon } from "react-native-elements";
 
 import HeaderComponent from "../components/Header";
@@ -18,9 +18,15 @@ export default class Home extends Component {
   
     render() {
         return (
-            <View>
+            <View style={styles.container}>
                 <HeaderComponent properties={this.props} title="Home" />
             </View>
         );
     }
 }
+
+var styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+});
